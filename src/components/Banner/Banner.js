@@ -1,0 +1,28 @@
+import React from "react";
+import "./Banner.css";
+import banner from "../../assets/images/banner/banner.png";
+
+export const Banner = () => {
+    return (
+        <section className="banner">
+            <div className="container">
+                <div className="banner__inner">
+                    <div className="banner__content">
+                        <h1 className="banner__title">
+                            Learn <br /> Any Foreign Language
+                        </h1>
+                        <div className="banner__text">
+                            With our teachers who write a program for each
+                            student, you will be able to make your first sketch
+                            after the first
+                        </div>
+                        <button className="banner__button">Get started</button>
+                    </div>
+                    <div className="banner__image">
+                        <img src={banner} alt="Banner image" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
