@@ -1,0 +1,31 @@
+.about {
+	margin-bottom: 100px;
+}
+.about__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+}
+.about__container {
+	max-width: 635px;
+}
+.about__title {
+	text-align: left;
+	margin-bottom: 23px;
+}
+.about__text {
+	margin-bottom: 60px;
+}
+.about__info {
+	text-align: center;
+	display: flex;
+	gap: 100px;
+	align-items: center;
+}
+.about__info span {
+	color: #2A3246;
+	font-weight: 600;
+	font-size: 48px;
+	margin-bottom: 20px;
+}
