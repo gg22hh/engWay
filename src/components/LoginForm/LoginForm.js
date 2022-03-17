@@ -23,6 +23,7 @@ export const LoginForm = ({ setActiveLoginForm, userName, setUserName }) => {
                         value={userName}
 						onChange={(e) => setUserName(e.target.value)}
                         placeholder="Login"
+						maxLength="10"
                         required
                     />
                 </div>

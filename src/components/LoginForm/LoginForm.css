@@ -19,7 +19,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.288);
-	z-index: 2;
+	z-index: 4;
 }
 .form input {
 	width: 100%;
@@ -46,4 +46,12 @@
 	top: 15px;
 	right: 15px;
 	font-size: 30px;
+}
+
+@media (max-width: 768px) {
+	.form {
+		width: 295px;
+		padding: 20px;
+		transform: translate(-50%, -50%);
+	}
 }
