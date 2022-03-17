@@ -33,10 +33,7 @@
     cursor: pointer;
     transition: all 0.3s;
 }
-.header__login:hover {
-    color: rgb(1, 97, 240);
-    background-color: unset;
-}
+
 .header__user {
     display: flex;
     align-items: center;
@@ -74,21 +71,21 @@
     top: 12px;
 }
 .header__burger.active span {
-	display: none;
+    display: none;
 }
 .header__burger.active::before {
-	top: 50%;
-	transform: translate(-50%, 0) rotate(45deg);
+    top: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
 }
 .header__burger.active::after {
-	top: 50%;
-	transform: translate(-50%, 0) rotate(-45deg);
+    top: 50%;
+    transform: translate(-50%, 0) rotate(-45deg);
 }
 .header__overlay {
-	display: none;
+    display: none;
 }
 .header__close {
-	display: none;
+    display: none;
 }
 
 @media (max-width: 880px) {
@@ -97,7 +94,17 @@
     }
 }
 
+@media (min-width: 769px) {
+    .header__login:hover {
+        color: rgb(1, 97, 240);
+        background-color: unset;
+    }
+}
+
 @media (max-width: 768px) {
+    .header {
+        margin-bottom: 0;
+    }
     .header__inner {
         flex-direction: column;
         position: fixed;
@@ -106,40 +113,40 @@
         left: -425px;
         background-color: rgb(227, 229, 253);
         justify-content: space-around;
-		max-width: 425px;
-		width: 100%;
-		z-index: 4;
-		transition: all .4s;
+        max-width: 425px;
+        width: 100%;
+        z-index: 4;
+        transition: all 0.4s;
     }
-	.header__inner.active {
-		left: 0;
-	}
+    .header__inner.active {
+        left: 0;
+    }
     .header__adaptive {
         display: block;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-	.header__navigation {
-		flex-direction: column;
-	}
-	.header__overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background-color: rgba(0, 0, 0, 0.219);
-		z-index: 2;
-	}
-	.header__overlay.active {
-		display: block;
-	}
-	.header__close {
-		display: block;
-		position: absolute;
-		top: 28px;
-		right: 28px;
-		font-size: 40px;
-	}
+    .header__navigation {
+        flex-direction: column;
+    }
+    .header__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.219);
+        z-index: 2;
+    }
+    .header__overlay.active {
+        display: block;
+    }
+    .header__close {
+        display: block;
+        position: absolute;
+        top: 28px;
+        right: 28px;
+        font-size: 40px;
+    }
 }

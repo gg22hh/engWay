@@ -1,62 +1,71 @@
 .contact {
-	margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 .contact__inner {
-	display: flex;
-	gap: 50px;
-	align-items: center;
+    display: flex;
+    gap: 50px;
+    align-items: center;
 }
 .contact__container {
-	max-width: 670px;
+    max-width: 670px;
 }
 .contact__title {
-	text-align: left;
-	margin-bottom: 37px;
+    text-align: left;
+    margin-bottom: 37px;
 }
 .contact__text {
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 .contact__form {
-	display: flex;
-	gap: 12px;
-	align-items: center;
+    display: flex;
+    gap: 12px;
+    align-items: center;
 }
 .contact__form input {
-	padding: 20px 30px 25px;
-	outline: unset;
-	border: 1px solid #8F95A5;
-	border-radius: 10px;
+    padding: 20px 30px 25px;
+    outline: unset;
+    border: 1px solid #8f95a5;
+    border-radius: 10px;
 }
 .contact__form input::placeholder {
-	font-size: 16px;
-	line-height: 24px;
+    font-size: 16px;
+    line-height: 24px;
 }
 .contact__form button {
-	padding: 22px 60px;
-	color: white;
-	background-color: rgb(1, 97, 240);
-	border: 1px solid rgb(1, 97, 240);
-	border-radius: 10px;
-	transition: all .3s;
-}
-.contact__form button:hover {
-	color: rgb(60, 71, 88);
-	background-color: unset;
+    padding: 22px 60px;
+    color: white;
+    background-color: rgb(1, 97, 240);
+    border: 1px solid rgb(1, 97, 240);
+    border-radius: 10px;
+    transition: all 0.3s;
 }
 
-@media(max-width: 1024px) {
-	.contact__inner {
-		flex-direction: column;
-	}
+@media (max-width: 1024px) {
+    .contact__inner {
+        flex-direction: column;
+    }
 }
 
-@media(max-width: 768px) {
-	.contact__form {
-		flex-direction: column;
-	}
-	.contact__form input,
-	.contact__form button {
-		max-width: 425px;
-		width: 100%;
-	}
+@media (min-width: 769px) {
+    .contact__form button:hover {
+        color: rgb(60, 71, 88);
+        background-color: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__form {
+        flex-direction: column;
+    }
+    .contact__form input,
+    .contact__form button {
+        max-width: 425px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .contact {
+        margin-bottom: 50px;
+    }
 }

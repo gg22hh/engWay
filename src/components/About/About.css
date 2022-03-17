@@ -37,6 +37,9 @@
 }
 
 @media(max-width: 593px) {
+	.about {
+		margin-bottom: 50px;
+	}
 	.about__info {
 		gap: 30px;
 	}
