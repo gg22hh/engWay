@@ -20,14 +20,14 @@ function App() {
                 setActiveLoginForm={setActiveLoginForm}
                 userName={userName}
             />
-            {/* <Banner
+            <Banner
                 userName={userName}
                 setActiveLoginForm={setActiveLoginForm}
             />
             <Skills />
             <About />
             <Contact />
-            <Footer /> */}
+            <Footer />
             {activeLoginForm && (
                 <LoginForm
                     setActiveLoginForm={setActiveLoginForm}

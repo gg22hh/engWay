@@ -13,7 +13,7 @@ export const Banner = ({ setActiveLoginForm, userName }) => {
             <div className="container">
                 <div className="banner__inner">
                     <div className="banner__content">
-                        <h1 className="banner__title">
+                        <h1 className="banner__title title">
                             Learn <br /> Any Foreign Language
                         </h1>
                         <div className="banner__text">

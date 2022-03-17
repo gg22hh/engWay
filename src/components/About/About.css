@@ -29,3 +29,21 @@
 	font-size: 48px;
 	margin-bottom: 20px;
 }
+
+@media(max-width: 1024px) {
+	.about__inner {
+		flex-direction: column-reverse;
+	}
+}
+
+@media(max-width: 593px) {
+	.about__info {
+		gap: 30px;
+	}
+}
+
+@media(max-width: 375px) {
+	.about__info {
+		flex-direction: column;
+	}
+}

@@ -43,3 +43,20 @@
 	color: rgb(60, 71, 88);
 	background-color: unset;
 }
+
+@media(max-width: 1024px) {
+	.contact__inner {
+		flex-direction: column;
+	}
+}
+
+@media(max-width: 768px) {
+	.contact__form {
+		flex-direction: column;
+	}
+	.contact__form input,
+	.contact__form button {
+		max-width: 425px;
+		width: 100%;
+	}
+}

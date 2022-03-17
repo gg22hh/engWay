@@ -29,7 +29,7 @@ export const About = () => {
                             </div>
                             <div className="about__info-languages">
                                 <span>1</span>
-                                <p>Foreign languages</p>
+                                <p>Languages</p>
                             </div>
                         </div>
                     </div>
