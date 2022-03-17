@@ -40,6 +40,6 @@
 	transition: all .3s;
 }
 .contact__form button:hover {
-	color: rgb(1, 97, 240);
+	color: rgb(60, 71, 88);
 	background-color: unset;
 }

@@ -2,7 +2,12 @@ import React from "react";
 import "./Banner.css";
 import banner from "../../assets/images/banner/banner.png";
 
-export const Banner = () => {
+export const Banner = ({ setActiveLoginForm, userName }) => {
+
+	const handleClickBannerButton = () => {
+		userName.length > 0 ? alert('already logged in') : setActiveLoginForm(true)
+	}
+
     return (
         <section className="banner">
             <div className="container">
@@ -16,7 +21,12 @@ export const Banner = () => {
                             student, you will be able to make your first sketch
                             after the first
                         </div>
-                        <button className="banner__button">Get started</button>
+                        <button
+                            onClick={handleClickBannerButton}
+                            className="banner__button"
+                        >
+                            Get started
+                        </button>
                     </div>
                     <div className="banner__image">
                         <img src={banner} alt="Banner image" />
