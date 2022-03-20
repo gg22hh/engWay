@@ -10,15 +10,20 @@ import { LoginForm } from "./components/LoginForm/LoginForm";
 
 function App() {
 	const [activeLoginForm, setActiveLoginForm] = useState(false)
+	const [darkTheme, setDarkTheme] = useState(
+		localStorage.getItem('theme') === 'true'
+	)
 	const [userName, setUserName] = useState('')
 
 
     return (
-        <div className="App">
+        <div className={darkTheme ? "App dark" : "App"}>
             <Header
                 activeLoginForm={activeLoginForm}
                 setActiveLoginForm={setActiveLoginForm}
                 userName={userName}
+                darkTheme={darkTheme}
+                setDarkTheme={setDarkTheme}
             />
             <Banner
                 userName={userName}
@@ -27,7 +32,7 @@ function App() {
             <Skills />
             <About />
             <Contact />
-            <Footer />
+            <Footer darkTheme={darkTheme} />
             {activeLoginForm && (
                 <LoginForm
                     setActiveLoginForm={setActiveLoginForm}

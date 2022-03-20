@@ -54,38 +54,112 @@ a {
 }
 
 h1 {
-	font-size: 30px;
-	font-weight: 500;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-	font-size: 20px;
-	line-height: 30px;
-	color: #8F95A5;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #8f95a5;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
 }
-
+.App.dark,
+.App.dark .form,
+.App.dark .header__inner.active {
+    background-color: #060c30;
+    color: white;
+}
+.App.dark::before {
+	content: url(./assets/images/bg.png);
+	position: absolute;
+	top: 700px;
+}
+.App.dark::after {
+	content: url(./assets/images/bg2.png);
+	position: absolute;
+	top: 1900px;
+	right: 0;
+}
+.App.dark .about__info span {
+	color: #BF17EA;
+}
+.App.dark header {
+    background-color: #060c30;
+    box-shadow: unset;
+    color: white;
+}
+.App.dark .banner__title::after {
+	content: url(./assets/images/banner/banner-item-dark.png);
+}
+.App.dark .skills__item {
+	background-color: unset;
+	border: 1px solid #BF17EA;
+}
+.App.dark .contact__form input,
+.App.dark .contact__form input::placeholder,
+.App.dark form input,
+.App.dark form input::placeholder {
+	color: white;
+}
+.App.dark .skills__item-text,
+.App.dark .sub-title,
+.App.dark .footer__logo {
+	color: white;
+}
+.Add.dark header button {
+	color: white;
+}
+.App.dark header .header__login,
+.App.dark header .header__theme {
+    background-color: unset;
+}
+.App.dark h1 {
+    background: linear-gradient(106.52deg, #c213ea 0%, #4dddce 93.42%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.App.dark .banner__button,
+.App.dark .contact__form button,
+.App.dark .skills__item-button,
+.App.dark .form button,
+.App.dark .header__burger span,
+.App.dark .header__burger::after,
+.App.dark .header__burger::before {
+    background: linear-gradient(93.94deg, #d40ef3 2.15%, #4cdccd 100%);
+    box-shadow: 0px 4px 19px rgba(255, 255, 255, 0.3);
+    border: unset;
+}
 .container {
-	max-width: 1120px;
-	padding: 0 10px;
-	margin: 0 auto;
+    max-width: 1120px;
+    padding: 0 10px;
+    margin: 0 auto;
 }
 
 .title {
-	font-size: 48px;
-	line-height: 80px;
-	color: black;
-	font-weight: 600;
-	text-align: center;
+    font-size: 48px;
+    line-height: 80px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
 }
 
 .sub-title {
-	font-size: 30px;
-	line-height: 40px;
-	color: #263238;
-	font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    color: #263238;
+    font-weight: 600;
+}
+
+@media(max-width: 1025px) {
+	.App.dark .banner__title::after,
+	.App.dark::after,
+	.App.dark::before {
+		content: ''
+	}
 }

@@ -1,14 +1,20 @@
-import React from 'react'
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
+import logo from "../../assets/images/header-logo.png";
 
-export const Footer = () => {
-	return (
+export const Footer = ({ darkTheme }) => {
+    return (
         <footer className="footer">
             <div className="container">
                 <div className="footer__inner">
-                    <a href="#" className="footer__logo">
-                        Eng<span>Way</span>
-                    </a>
+                    {darkTheme ? (
+                        <img src={logo} alt="" />
+                    ) : (
+                        <a href="#" className="footer__logo">
+                            Eng<span>Way</span>
+                        </a>
+                    )}
+
                     <ul className="footer__list">
                         <li className="footer__list-item">
                             <a href="#">Terms and Conditions</a>
@@ -24,4 +30,4 @@ export const Footer = () => {
             </div>
         </footer>
     );
-}
+};

@@ -13,6 +13,9 @@
 .header__logo,
 .header__logo-adaptive {
     font-size: 36px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
 }
 .header__logo span,
 .header__logo-adaptive span {
