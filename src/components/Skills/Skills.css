@@ -31,8 +31,6 @@
 .skills__item-button {
     padding: 7px 35px;
     color: white;
-    background-color: rgb(1, 97, 240);
-    border: 1px solid rgb(1, 97, 240);
     border-radius: 5px;
     transition: all 0.3s;
 }
@@ -55,8 +53,7 @@
 
 @media (min-width: 769px) {
     .skills__item-button:hover {
-        color: rgb(1, 97, 240);
-        background-color: unset;
+        box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.555);
     }
     .skills__item:hover {
         transform: translateY(-15px);

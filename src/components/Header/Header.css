@@ -2,7 +2,6 @@
     padding: 25px 0;
     color: #263238;
     margin-bottom: 50px;
-    background: rgb(227, 229, 253);
     box-shadow: 0px 1px 18px rgb(172, 172, 172);
 }
 .header__inner {
@@ -29,10 +28,8 @@
 }
 .header__login {
     padding: 5px 20px;
-    border: 1px solid rgb(1, 97, 240);
     color: white;
     border-radius: 8px;
-    background-color: rgb(1, 97, 240);
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -99,8 +96,7 @@
 
 @media (min-width: 769px) {
     .header__login:hover {
-        color: rgb(1, 97, 240);
-        background-color: unset;
+        box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.555);
     }
 }
 

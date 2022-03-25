@@ -34,8 +34,6 @@
 .contact__form button {
     padding: 22px 60px;
     color: white;
-    background-color: rgb(1, 97, 240);
-    border: 1px solid rgb(1, 97, 240);
     border-radius: 10px;
     transition: all 0.3s;
 }
@@ -48,8 +46,7 @@
 
 @media (min-width: 769px) {
     .contact__form button:hover {
-        color: rgb(1, 97, 240);
-        background-color: unset;
+        box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.555);
     }
 }
 

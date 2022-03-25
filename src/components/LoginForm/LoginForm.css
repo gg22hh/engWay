@@ -31,8 +31,6 @@
 .form__btn {
     margin: 0 auto;
     padding: 7px 30px;
-    background-color: rgb(1, 97, 240);
-    border: 1px solid rgb(1, 97, 240);
     border-radius: 8px;
     color: white;
     transition: all 0.3s;

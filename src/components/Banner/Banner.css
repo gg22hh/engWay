@@ -12,7 +12,10 @@
 }
 .banner__title {
     font-weight: 600;
-    color: black;
+    background: linear-gradient(106.52deg, #c213ea 0%, #4dddce 93.42%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 64px;
     line-height: 80px;
     margin-bottom: 40px;
@@ -20,7 +23,7 @@
     text-align: left;
 }
 .banner__title::after {
-    content: url(../../assets/images/banner/banner-item.png);
+    content: url(../../assets/images/banner/banner-item-dark.png);
     position: absolute;
     top: 95px;
     right: 0;
@@ -33,10 +36,8 @@
 .banner__button {
     font-size: 36px;
     padding: 30px 100px;
-    background-color: rgb(1, 97, 240);
     border-radius: 15px;
     color: white;
-    border: 1px solid rgb(1, 97, 240);
     transition: all 0.3s;
 }
 
@@ -51,8 +52,7 @@
 
 @media (min-width: 769px) {
     .banner__button:hover {
-        color: rgb(1, 97, 240);
-        background-color: unset;
+        box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.555);
     }
 }
 
@@ -62,7 +62,7 @@
 	}
     .title {
         font-size: 45px;
-        line-height: 50px;
+        line-height: 55px;
     }
     .banner__button {
         padding: 14px;
