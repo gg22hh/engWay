@@ -23,7 +23,7 @@
     text-align: left;
 }
 .banner__title::after {
-    content: url(../../assets/images/banner/banner-item-dark.png);
+    content: url(../../../../assets/images/banner/banner-item-dark.png);
     position: absolute;
     top: 95px;
     right: 0;

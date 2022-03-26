@@ -1,7 +1,7 @@
 import React from "react";
 import "./Skills.css";
 import { SkillsItem } from "./components/SkillsItem";
-import { skillsList } from '../../shared/projectData';
+import { skillsList } from '../../../../shared/projectData'
 
 export const Skills = () => {
 

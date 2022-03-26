@@ -176,6 +176,14 @@ body {
     font-weight: 600;
 }
 
+.content {
+	min-height: calc(100vh - 251px);
+}
+
+.active {
+	border-bottom: 2px solid #BF17EA;
+}
+
 @media(max-width: 1025px) {
 	.App.dark .banner__title::after,
 	.App.dark::after,

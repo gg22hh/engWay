@@ -26,6 +26,13 @@
     align-items: center;
     gap: 35px;
 }
+.header__navigation span {
+	border-bottom: 2px solid transparent;
+	transition: all .3s;
+}
+.header__navigation span:hover {
+	border-bottom: 2px solid #BF17EA;
+}
 .header__login {
     padding: 5px 20px;
     color: white;

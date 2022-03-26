@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import banner from "../../assets/images/banner/banner.png";
+import banner from "../../../../assets/images/banner/banner.png";
 
 export const Banner = ({ setActiveLoginForm, userName }) => {
 

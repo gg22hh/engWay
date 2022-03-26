@@ -3,6 +3,7 @@ import "./Header.css";
 import PersonIcon from "@mui/icons-material/Person";
 import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
 import logo from "../../assets/images/header-logo.png";
+import { NavLink } from 'react-router-dom';
 
 export const Header = ({
     setActiveLoginForm,
@@ -46,10 +47,14 @@ export const Header = ({
                         </button>
                     </div>
                     <nav className="header__navigation">
-                        <a href="#">Home</a>
-                        <a href="#">Listening</a>
-                        <a href="#">Reading</a>
-                        <a href="#">Grammar</a>
+						<span><NavLink to="/">Home</NavLink></span>
+						<span><NavLink to="/listening">Listening</NavLink></span>
+						<span><NavLink to="/reading">Reading</NavLink></span>
+						<span><NavLink to="/grammar">Grammar</NavLink></span>
+                        
+                        
+                        
+                        
                     </nav>
                     {userName.length > 0 ? (
                         <div className="header__user">
