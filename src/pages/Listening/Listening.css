@@ -1,0 +1,21 @@
+.listening {
+	text-align: center;
+	color: black;
+}
+
+.listening h1 {
+	-webkit-text-fill-color: unset;
+	background: unset;
+	margin-bottom: 40px;
+}
+
+.listening__tasks {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.tasks__item h2 {
+	cursor: pointer;
+}

@@ -1,8 +1,5 @@
 import { useState } from 'react';
 import "./App.css";
-import { Header } from "./components/Header/Header";
-import { About } from "./pages/Home/components/About/About";
-import { Footer } from "./components/Footer/Footer";
 import { LoginForm } from "./components/LoginForm/LoginForm";
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
@@ -49,21 +46,6 @@ function App() {
                 </Route>
             </Routes>
 
-            {/* <Header
-                activeLoginForm={activeLoginForm}
-                setActiveLoginForm={setActiveLoginForm}
-                userName={userName}
-                darkTheme={darkTheme}
-                setDarkTheme={setDarkTheme}
-            />
-            <Banner
-                userName={userName}
-                setActiveLoginForm={setActiveLoginForm}
-            />
-            <Skills />
-            <About />
-            <Contact />
-            <Footer darkTheme={darkTheme} /> */}
             {activeLoginForm && (
                 <LoginForm
                     setActiveLoginForm={setActiveLoginForm}
