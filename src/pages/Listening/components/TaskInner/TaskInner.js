@@ -3,7 +3,7 @@ import "./TaskInner.css";
 import audio from "../../../../assets/audios/two-brothers.mp3";
 
 export const TaskInner = () => {
-    const [words, setWords] = useState(true);
+    const [words, setWords] = useState(false);
 
     return (
         <div className="taskInner">
@@ -20,7 +20,7 @@ export const TaskInner = () => {
                 aliquid praesentium molestiae, soluta quas fuga!
             </p>
 
-            <button onClick={() => setWords(true)} className="taskInner__btn">
+            <button onClick={() => setWords(!words)} className="taskInner__btn">
                 Show Words
             </button>
 

@@ -12,18 +12,21 @@ export const Listening = () => {
       <div className="listening">
           <h1 className="listening__title">Page Listening</h1>
           <ol className="listening__tasks">
-              <li onClick={() => setTheme(!theme)} className="tasks__item">
-                  <h2>Name of the theme</h2>
+              <li className="tasks__item">
+                  <h2 onClick={() => setTheme(!theme)}>Name of the theme</h2>
                   {theme ? <TaskInner /> : null}
               </li>
               <li className="tasks__item">
-                  <h2>Name of the theme</h2>
+                  <h2 onClick={() => setTheme1(!theme)}>Name of the theme</h2>
+                  {theme1 ? <TaskInner /> : null}
               </li>
               <li className="tasks__item">
-                  <h2>Name of the theme</h2>
+                  <h2 onClick={() => setTheme2(!theme)}>Name of the theme</h2>
+                  {theme2 ? <TaskInner /> : null}
               </li>
               <li className="tasks__item">
-                  <h2>Name of the theme</h2>
+                  <h2 onClick={() => setTheme3(!theme)}>Name of the theme</h2>
+                  {theme3 ? <TaskInner /> : null}
               </li>
           </ol>
       </div>
