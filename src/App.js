@@ -10,9 +10,7 @@ import { Grammar } from "./pages/Grammar/Grammar";
 
 function App() {
     const [activeLoginForm, setActiveLoginForm] = useState(false);
-    const [darkTheme, setDarkTheme] = useState(
-        localStorage.getItem("theme") === "true"
-    );
+    const [darkTheme, setDarkTheme] = useState(true);
     const [userName, setUserName] = useState("");
 
     return (

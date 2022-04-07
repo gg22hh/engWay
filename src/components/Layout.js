@@ -21,9 +21,7 @@ export const Layout = ({
             />
 
             <div className="content">
-                <div className="container">
-                    <Outlet />
-                </div>
+                <Outlet />
             </div>
 
             <Footer darkTheme={darkTheme} />
