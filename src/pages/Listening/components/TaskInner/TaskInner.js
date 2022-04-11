@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import "./TaskInner.css";
-import audio from "../../../../assets/audios/two-brothers.mp3";
 
-export const TaskInner = () => {
-    const [words, setWords] = useState(false);
+export const TaskInner = ({ audio, text, words }) => {
+    const [showWords, setWords] = useState(false);
+    const values = Object.values(words);
+    const list = values.map((word, index) => {
+        return (
+            <li className="taskInner__list-item">
+                <div>{index + 1}</div>
+                <div key={index}>{word}</div>
+            </li>
+        );
+    });
 
     return (
         <div className="taskInner">
@@ -13,48 +21,16 @@ export const TaskInner = () => {
                 </audio>
             </div>
 
-            <p className="taskInner__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-                placeat! Animi possimus doloremque eaque ut, repudiandae
-                cupiditate eius vitae excepturi eveniet debitis natus. Dolorum
-                aliquid praesentium molestiae, soluta quas fuga!
-            </p>
+            <p className="taskInner__text">{text}</p>
 
-            <button onClick={() => setWords(!words)} className="taskInner__btn">
+            <button
+                onClick={() => setWords(!showWords)}
+                className="taskInner__btn"
+            >
                 Show Words
             </button>
 
-            {words && (
-                <ol className="taskInner__list">
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                    <li className="taskInner__list-item">
-                        night - [naɪt] - ночь
-                    </li>
-                </ol>
-            )}
+            {showWords && <ul className="taskInner__list">{list}</ul>}
         </div>
     );
 };

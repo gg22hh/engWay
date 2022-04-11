@@ -1,14 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Listening.css";
-import { TaskInner } from "./components/TaskInner/TaskInner";
 import { Link } from "react-router-dom";
 import banner from "../../assets/images/listening/banner.png";
+import { TasksItem } from "./components/TaskInner/TasksItem";
 
 export const Listening = () => {
-    const [theme, setTheme] = useState(false);
-    const [theme1, setTheme1] = useState(false);
-    const [theme2, setTheme2] = useState(false);
-    const [theme3, setTheme3] = useState(false);
+    const AUDIOS_URL = "https://6254687719bc53e2347e0da5.mockapi.io/Listening";
+
+    const [audios, setAudios] = useState([]);
+
+    useEffect(() => {
+        const getAudios = async () => {
+            const response = await fetch(AUDIOS_URL);
+            if (response.ok) {
+                const json = await response.json();
+                setAudios(json);
+            } else {
+                console.log("error");
+            }
+        };
+        getAudios();
+    }, [AUDIOS_URL]);
+
+    const audiosList = audios.map((item) => {
+        return (
+            <TasksItem
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                audio={item.audio}
+                text={item.text}
+                words={item.words}
+            />
+        );
+    });
 
     return (
         <section className="listening">
@@ -26,44 +51,7 @@ export const Listening = () => {
                     <img src={banner} alt="" />
                 </div>
                 <div className="listening__list">
-                    <ol className="listening__tasks">
-                        <li className="tasks__item">
-                            <h2
-                                className="tasks__item-title"
-                                onClick={() => setTheme(!theme)}
-                            >
-                                Name of the theme
-                            </h2>
-                            {theme ? <TaskInner /> : null}
-                        </li>
-                        <li className="tasks__item">
-                            <h2
-                                className="tasks__item-title"
-                                onClick={() => setTheme1(!theme1)}
-                            >
-                                Name of the theme
-                            </h2>
-                            {theme1 ? <TaskInner /> : null}
-                        </li>
-                        <li className="tasks__item">
-                            <h2
-                                className="tasks__item-title"
-                                onClick={() => setTheme2(!theme2)}
-                            >
-                                Name of the theme
-                            </h2>
-                            {theme2 ? <TaskInner /> : null}
-                        </li>
-                        <li className="tasks__item">
-                            <h2
-                                className="tasks__item-title"
-                                onClick={() => setTheme3(!theme3)}
-                            >
-                                Name of the theme
-                            </h2>
-                            {theme3 ? <TaskInner /> : null}
-                        </li>
-                    </ol>
+                    <ul className="listening__tasks">{audiosList}</ul>
                 </div>
             </div>
         </section>
