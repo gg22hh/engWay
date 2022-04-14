@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import "./Header.css";
 import PersonIcon from "@mui/icons-material/Person";
-import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
+// import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
 import logo from "../../assets/images/header-logo.png";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
 
 export const Header = ({
     setActiveLoginForm,
     userName,
     darkTheme,
-    setDarkTheme,
+    // setDarkTheme,
 }) => {
     const [burgerActive, setBurgerActive] = useState(false);
-    const color = darkTheme ? "yellow" : "blue";
+    // const color = darkTheme ? "yellow" : "blue";
 
-	const changeTheme = () => {
-		localStorage.setItem("theme", !darkTheme);
-		setDarkTheme(!darkTheme)
-	}
+    // const changeTheme = () => {
+    //     localStorage.setItem("theme", !darkTheme);
+    //     setDarkTheme(!darkTheme);
+    // };
 
     return (
         <header className="header">
@@ -37,31 +37,35 @@ export const Header = ({
                         {darkTheme ? (
                             <img src={logo} alt="" />
                         ) : (
-                            <a href="#">
+                            <Link to="/">
                                 Eng<span>Way</span>
-                            </a>
+                            </Link>
                         )}
 
-                        <button onClick={changeTheme} className="header__theme">
+                        {/* <button onClick={changeTheme} className="header__theme">
                             <BrightnessMediumIcon style={{ fill: color }} />
-                        </button>
+                        </button> */}
                     </div>
                     <nav className="header__navigation">
-						<span><NavLink to="/">Home</NavLink></span>
-						<span><NavLink to="/listening">Listening</NavLink></span>
-						<span><NavLink to="/reading">Reading</NavLink></span>
-						<span><NavLink to="/grammar">Grammar</NavLink></span>
-                        
-                        
-                        
-                        
+                        <span>
+                            <NavLink to="/">Home</NavLink>
+                        </span>
+                        <span>
+                            <NavLink to="/listening">Listening</NavLink>
+                        </span>
+                        <span>
+                            <NavLink to="/reading">Reading</NavLink>
+                        </span>
+                        <span>
+                            <NavLink to="/grammar">Grammar</NavLink>
+                        </span>
                     </nav>
                     {userName.length > 0 ? (
                         <div className="header__user">
                             {userName}
-                            <a href="#">
+                            <Link to="/">
                                 <PersonIcon />
-                            </a>
+                            </Link>
                         </div>
                     ) : (
                         <button
@@ -85,9 +89,9 @@ export const Header = ({
                         {darkTheme ? (
                             <img src={logo} alt="" />
                         ) : (
-                            <a href="#">
+                            <Link to="/">
                                 Eng<span>Way</span>
-                            </a>
+                            </Link>
                         )}
                     </div>
                     <button

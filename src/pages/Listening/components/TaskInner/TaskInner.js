@@ -6,7 +6,7 @@ export const TaskInner = ({ audio, text, words }) => {
     const values = Object.values(words);
     const list = values.map((word, index) => {
         return (
-            <li className="taskInner__list-item">
+            <li key={index} className="taskInner__list-item">
                 <div>{index + 1}</div>
                 <div key={index}>{word}</div>
             </li>

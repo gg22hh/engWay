@@ -185,8 +185,8 @@ h1 {
 
 @media (max-width: 1025px) {
     .App.dark .banner__title::after,
-    .App.dark::after,
-    .App.dark::before {
+    .App.dark .home::after,
+    .App.dark .home::before {
         content: "";
     }
 }
