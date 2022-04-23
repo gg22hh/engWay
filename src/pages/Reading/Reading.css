@@ -1,0 +1,23 @@
+.reading__task-text button {
+    display: inline-block;
+    color: white;
+}
+
+.reading__task-title {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.reading__task-text {
+    display: flex;
+    gap: 2px 5px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+.reading__task-word {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}

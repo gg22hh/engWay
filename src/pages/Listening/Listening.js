@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Listening.css";
 import { Link } from "react-router-dom";
 import banner from "../../assets/images/listening/banner.png";
 import { TasksItem } from "./components/TaskInner/TasksItem";
+import { useDataFromServer } from "../../shared/hooks";
+import { AUDIOS_URL } from "../../shared/projectData";
+import loadingGif from "../../assets/images/loading-gif.gif";
 
 export const Listening = () => {
-    const AUDIOS_URL = "https://6254687719bc53e2347e0da5.mockapi.io/Listening";
-
-    const [audios, setAudios] = useState([]);
-
-    useEffect(() => {
-        const getAudios = async () => {
-            const response = await fetch(AUDIOS_URL);
-            if (response.ok) {
-                const json = await response.json();
-                setAudios(json);
-            } else {
-                console.log("error");
-            }
-        };
-        getAudios();
-    }, [AUDIOS_URL]);
+    const [audios, isLoading] = useDataFromServer(AUDIOS_URL);
 
     const audiosList = audios.map((item) => {
         return (
@@ -51,7 +39,17 @@ export const Listening = () => {
                     <img src={banner} alt="" />
                 </div>
                 <div className="listening__list">
-                    <ul className="listening__tasks">{audiosList}</ul>
+                    <ul className="listening__tasks">
+                        {isLoading ? (
+                            <img
+                                className="loadingGif"
+                                src={loadingGif}
+                                alt="loading"
+                            />
+                        ) : (
+                            audiosList
+                        )}
+                    </ul>
                 </div>
             </div>
         </section>

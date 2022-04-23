@@ -183,6 +183,11 @@ h1 {
     border-bottom: 2px solid #bf17ea;
 }
 
+.loadingGif {
+    margin: 0 auto;
+    width: 200px;
+}
+
 @media (max-width: 1025px) {
     .App.dark .banner__title::after,
     .App.dark .home::after,
