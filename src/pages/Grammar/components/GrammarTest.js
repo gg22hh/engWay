@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { presentSimple, rightAnswers } from "../../../shared/projectData";
 import { GrammarTestTask } from "./GrammarTestTask";
 
-export const GrammarTest = () => {
+export const GrammarTest = ({ rightAnswers, tasks }) => {
     const [answers, setAnswers] = useState({
         1: "",
         2: "",
@@ -30,7 +29,7 @@ export const GrammarTest = () => {
         setRigthAnswersCount(rigthAns);
         setFalseAnswersCount(falseAns);
     };
-    const grammarTaskList = presentSimple.map((item) => {
+    const grammarTaskList = tasks.map((item) => {
         return (
             <GrammarTestTask
                 key={item.id}
@@ -48,7 +47,7 @@ export const GrammarTest = () => {
         <>
             <div className="grammar__test">
                 <h2 className="grammar__test-title">TEST</h2>
-                {grammarTaskList}
+                <div className="grammar__tests">{grammarTaskList}</div>
             </div>
             <button onClick={handleClick} className="grammar__button">
                 Поверить

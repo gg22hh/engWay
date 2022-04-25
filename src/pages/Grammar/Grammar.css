@@ -1,0 +1,38 @@
+.grammar__task-title,
+.grammar__test-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.grammar__task-title {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.grammar__task-subtitle {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.grammar__task-text {
+    margin-bottom: 25px;
+}
+.grammar__test {
+    margin-bottom: 25px;
+}
+.grammar__button {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.grammar__test-answers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.grammar__tests {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.grammar__answers {
+    text-align: center;
+}
