@@ -124,3 +124,38 @@ export const translatedWords = {
     best: "лучший",
     job: "работа",
 };
+
+export const presentSimple = [
+    {
+        id: 1,
+        text: "I .... Spanish with my sister.",
+        answer1: "study",
+        answer2: "studies",
+    },
+    {
+        id: 2,
+        text: "My sister .... a shower every morning.",
+        answer1: "take",
+        answer2: "takes",
+    },
+    {
+        id: 3,
+        text: "This house .... to my grandmother.",
+        answer1: "belong",
+        answer2: "belongs",
+    },
+    {
+        id: 4,
+        text: "We .... to go for a walk in the morning.",
+        answer1: "like",
+        answer2: "likes",
+    },
+    {
+        id: 5,
+        text: "My husband and I .... a lot of money on books.",
+        answer1: "spend",
+        answer2: "spends",
+    },
+];
+
+export const rightAnswers = ["study", "takes", "belongs", "like", "spend"];

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { presentSimple, rightAnswers } from "../../../shared/projectData";
 import { GrammarTestTask } from "./GrammarTestTask";
 
 export const GrammarTest = () => {
@@ -9,50 +10,57 @@ export const GrammarTest = () => {
         4: "",
         5: "",
     });
-    console.log(answers);
+    const [showAnswers, setShowAnswers] = useState(false);
+    const [rightAnswersCount, setRigthAnswersCount] = useState(0);
+    const [falseAnswersCount, setFalseAnswersCount] = useState(0);
+    const handleClick = () => {
+        setShowAnswers(true);
+        const usersAnswers = rightAnswers.map((ans, index) => {
+            return ans === answers[index + 1] && true;
+        });
+        let rigthAns = 0;
+        let falseAns = 0;
+        for (let i = 0; i < usersAnswers.length; i++) {
+            if (usersAnswers[i] === true) {
+                rigthAns += 1;
+            } else {
+                falseAns += 1;
+            }
+        }
+        setRigthAnswersCount(rigthAns);
+        setFalseAnswersCount(falseAns);
+    };
+    const grammarTaskList = presentSimple.map((item) => {
+        return (
+            <GrammarTestTask
+                key={item.id}
+                id={item.id}
+                text={item.text}
+                answer1={item.answer1}
+                answer2={item.answer2}
+                setAnswers={setAnswers}
+                answers={answers}
+            />
+        );
+    });
+
     return (
-        <div className="grammar__test">
-            <h2 className="grammar__test-title">TEST</h2>
-            <GrammarTestTask
-                text="I .... Spanish with my sister."
-                answer1="study"
-                answer2="studies"
-                id={1}
-                setAnswers={setAnswers}
-                answers={answers}
-            />
-            <GrammarTestTask
-                text="My sister .... a shower every morning."
-                answer1="take"
-                answer2="takes"
-                id={2}
-                setAnswers={setAnswers}
-                answers={answers}
-            />
-            <GrammarTestTask
-                text="This house .... to my grandmother."
-                answer1="belong"
-                answer2="belongs"
-                id={3}
-                setAnswers={setAnswers}
-                answers={answers}
-            />
-            <GrammarTestTask
-                text="We .... to go for a walk in the morning."
-                answer1="like"
-                answer2="likes"
-                id={4}
-                setAnswers={setAnswers}
-                answers={answers}
-            />
-            <GrammarTestTask
-                text="My husband and I .... a lot of money on books."
-                answer1="spend"
-                answer2="spends"
-                id={5}
-                setAnswers={setAnswers}
-                answers={answers}
-            />
-        </div>
+        <>
+            <div className="grammar__test">
+                <h2 className="grammar__test-title">TEST</h2>
+                {grammarTaskList}
+            </div>
+            <button onClick={handleClick} className="grammar__button">
+                Поверить
+            </button>
+            <div className="grammar__answers">
+                {showAnswers && (
+                    <>
+                        <div>Right Answers: {rightAnswersCount}</div>
+                        <div>False Answers: {falseAnswersCount}</div>
+                    </>
+                )}
+            </div>
+        </>
     );
 };
