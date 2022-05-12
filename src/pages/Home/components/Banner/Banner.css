@@ -9,6 +9,10 @@
 }
 .banner__content {
     max-width: 540px;
+    animation: bannerContent 1s;
+}
+.banner__image {
+    animation: bannerImage 1s;
 }
 .banner__title {
     font-weight: 600;
@@ -41,6 +45,24 @@
     transition: all 0.3s;
 }
 
+@keyframes bannerContent {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bannerImage {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @media (max-width: 1024px) {
     .banner__inner {
         flex-direction: column-reverse;
@@ -57,9 +79,9 @@
 }
 
 @media (max-width: 425px) {
-	.banner {
-		margin-bottom: 50px;
-	}
+    .banner {
+        margin-bottom: 50px;
+    }
     .title {
         font-size: 45px;
         line-height: 55px;

@@ -64,6 +64,25 @@ body {
     color: #8f95a5;
 }
 
+/* html, */
+body::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: #060c30;
+}
+
+/* html, */
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(66, 66, 66);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 10px #3d3d3d;
+}
+
+/* html, */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
 }
@@ -183,7 +202,33 @@ h1 {
 
 .loadingGif {
     margin: 0 auto;
+    display: block;
     width: 200px;
+}
+
+.home {
+    animation: home 2s;
+}
+.home__inner {
+    animation: homeInner 1s;
+}
+
+@keyframes homeInner {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes home {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1025px) {

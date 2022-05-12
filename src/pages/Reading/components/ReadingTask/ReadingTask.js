@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { translatedWords } from "../../../../shared/projectData";
 
 export const ReadingTask = ({ text, title }) => {
-    const [show, setShow] = useState(false);
     const [s, setS] = useState();
     const keys = Object.keys(translatedWords);
 
@@ -23,19 +22,14 @@ export const ReadingTask = ({ text, title }) => {
             </button>
         );
     });
-    console.log(newText);
 
     return (
         <div className="reading__task">
-            <h2 onClick={() => setShow(!show)} className="reading__task-title">
-                {title}
-            </h2>
-            {show && (
-                <>
-                    <div className="reading__task-text">{newText}</div>
-                    <h3 className="reading__task-word">{s}</h3>
-                </>
-            )}
+            <h2 className="reading__task-title">{title}</h2>
+            <>
+                <div className="reading__task-text">{newText}</div>
+                <h3 className="reading__task-word">{s}</h3>
+            </>
         </div>
     );
 };

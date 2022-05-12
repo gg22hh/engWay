@@ -11,9 +11,11 @@ export const Home = ({ userName, setActiveLoginForm }) => {
                 userName={userName}
                 setActiveLoginForm={setActiveLoginForm}
             />
-            <Skills />
-            <About />
-            <Contact />
+            <div className="home__inner">
+                <Skills />
+                <About />
+                <Contact />
+            </div>
         </section>
     );
 };

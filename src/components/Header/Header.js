@@ -1,23 +1,11 @@
 import React, { useState } from "react";
 import "./Header.css";
 import PersonIcon from "@mui/icons-material/Person";
-// import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
 import logo from "../../assets/images/header-logo.png";
 import { Link, NavLink } from "react-router-dom";
 
-export const Header = ({
-    setActiveLoginForm,
-    userName,
-    darkTheme,
-    // setDarkTheme,
-}) => {
+export const Header = ({ setActiveLoginForm, userName, darkTheme }) => {
     const [burgerActive, setBurgerActive] = useState(false);
-    // const color = darkTheme ? "yellow" : "blue";
-
-    // const changeTheme = () => {
-    //     localStorage.setItem("theme", !darkTheme);
-    //     setDarkTheme(!darkTheme);
-    // };
 
     return (
         <header className="header">
@@ -35,16 +23,14 @@ export const Header = ({
                     </button>
                     <div className="header__logo">
                         {darkTheme ? (
-                            <img src={logo} alt="" />
+                            <Link to="/">
+                                <img src={logo} alt="" />
+                            </Link>
                         ) : (
                             <Link to="/">
                                 Eng<span>Way</span>
                             </Link>
                         )}
-
-                        {/* <button onClick={changeTheme} className="header__theme">
-                            <BrightnessMediumIcon style={{ fill: color }} />
-                        </button> */}
                     </div>
                     <nav className="header__navigation">
                         <span>

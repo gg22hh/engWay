@@ -1,6 +1,7 @@
 .listening {
     text-align: center;
     color: white;
+    animation: listening 2s;
 }
 
 .listening__list {
@@ -42,6 +43,7 @@
     font-size: 16px;
     display: flex;
     margin-bottom: 70px;
+    animation: navigation 1s;
 }
 .listening__nav-home:first-child {
     padding-left: 22px;
@@ -67,4 +69,34 @@
 .tasks__item-title {
     letter-spacing: 0.1em;
     font-weight: 600;
+}
+.listening__inner {
+    animation: listeningInner 1s;
+}
+
+@keyframes listening {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes navigation {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes listeningInner {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

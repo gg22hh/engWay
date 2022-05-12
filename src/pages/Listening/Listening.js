@@ -34,22 +34,24 @@ export const Listening = () => {
                         <Link to={"/listening"}>Listening</Link>
                     </div>
                 </div>
-                <h1 className="listening__title">Listening</h1>
-                <div className="listening__banner">
-                    <img src={banner} alt="" />
-                </div>
-                <div className="listening__list">
-                    <ul className="listening__tasks">
-                        {isLoading ? (
-                            <img
-                                className="loadingGif"
-                                src={loadingGif}
-                                alt="loading"
-                            />
-                        ) : (
-                            audiosList
-                        )}
-                    </ul>
+                <div className="listening__inner">
+                    <h1 className="listening__title">Listening</h1>
+                    <div className="listening__banner">
+                        <img src={banner} alt="" />
+                    </div>
+                    <div className="listening__list">
+                        <ul className="listening__tasks">
+                            {isLoading ? (
+                                <img
+                                    className="loadingGif"
+                                    src={loadingGif}
+                                    alt="loading"
+                                />
+                            ) : (
+                                audiosList
+                            )}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
