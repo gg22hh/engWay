@@ -1,3 +1,7 @@
+.grammar {
+    animation: grammar 2s;
+}
+
 .grammar__task-title,
 .grammar__test-title {
     font-size: 30px;
@@ -8,13 +12,15 @@
     text-transform: uppercase;
     cursor: pointer;
 }
-.grammar__task-subtitle {
-    font-size: 25px;
+.grammar__banner {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
-.grammar__task-text {
-    margin-bottom: 25px;
+.grammar__title {
+    display: inline-block;
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 20px;
 }
 .grammar__test {
     margin-bottom: 25px;
@@ -33,6 +39,64 @@
     flex-direction: column;
     gap: 15px;
 }
+.grammar__test {
+    animation: grammarTest 1s;
+}
 .grammar__answers {
     text-align: center;
+}
+.grammar__simples {
+    background: url(../../assets/images/grammar/grammar-test.svg) no-repeat
+        center;
+    background-size: contain;
+    height: 997px;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-around;
+    color: black;
+    margin-bottom: 40px;
+}
+.grammar__tasks {
+    padding-top: 350px;
+    padding-left: 120px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+}
+.grammar__text {
+    width: 433px;
+    padding-top: 245px;
+}
+.grammar__task {
+    cursor: pointer;
+}
+.grammar__inner {
+    animation: grammarInner 1s;
+}
+
+@keyframes grammar {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes grammarInner {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes grammarTest {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

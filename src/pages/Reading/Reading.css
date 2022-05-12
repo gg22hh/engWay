@@ -49,6 +49,8 @@
 .reading__tasks-top {
     display: flex;
     justify-content: end;
+    border-bottom: 10px solid #cd10f0;
+    border-radius: 8px;
     margin-bottom: 80px;
 }
 .reading__task-image img {
